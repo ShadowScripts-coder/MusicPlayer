@@ -1,0 +1,77 @@
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #000;
+}
+
+#song-title {
+    user-select: none;
+    color: white;
+    margin: auto;
+    font-weight: 100;
+    line-height: 2;
+}
+
+#song-cover {
+    top: calc(50% - 300px);
+    left: calc(50% - 300px);
+    position: absolute;
+    border-style: none;
+    width: 600px;
+    height: 600px;
+}
+
+div.ui-top-bar {
+    text-align: center;
+    display: block;
+    background-color: #000;
+    border-bottom-width: 1px;
+    border-bottom-color: #252525;
+    border-bottom-style: solid;
+    height: 65px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#pickMp3Button {
+    border-style: none;
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+    --r:7px;
+  
+    height: 50px;
+    aspect-ratio: cos(30deg);
+    --_g:calc(tan(60deg)*var(--r)) left var(--r),#000 98%,#0000 101%;
+    -webkit-mask:
+      conic-gradient(from 60deg at calc(3*var(--r)/2 - 100%),#000 60deg,#0000 0)
+       0 0/calc(100% - 3*var(--r)/2) 100% no-repeat,
+      radial-gradient(var(--r) at calc(100% - 2*var(--r)) 50%,#000 98%,#0000 101%),
+      radial-gradient(var(--r) at top    var(--_g)),
+      radial-gradient(var(--r) at bottom var(--_g));
+    clip-path: polygon(100% 50%,0 100%,0 0);
+    background: #fff;
+  }
+
+#volume-slider {
+    position: absolute;
+    right: 10px;
+    bottom: 32.5px;
+    accent-color: #fff;
+    border-color: #000;
+    height: 5px;
+}
+
+div.ui-bottom-bar { 
+    display: inline-block;
+    background-color: #000;
+    border-top-width: 1px;
+    border-top-color: #252525;
+    border-top-style: solid;
+    height: 65px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
