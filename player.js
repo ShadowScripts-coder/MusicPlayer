@@ -64,9 +64,9 @@ function playAudio() {
     }
 
     // Create a new audio object and play it
-    currentAudio = new Audio('../Epic Music/' + selectedFile);
+    currentAudio = new Audio('./Epic Music/' + selectedFile);
     document.getElementById("song-title").innerHTML = selectedFile.split(".mp3")[0];
-    document.getElementById("song-cover").setAttribute("src", '../Covers/' + selectedFile.split(".mp3")[0] + ".jpg");
+    document.getElementById("song-cover").setAttribute("src", './Covers/' + selectedFile.split(".mp3")[0] + ".jpg");
     currentAudio.volume = document.getElementById('volume-slider').value; // Set volume from slider
     currentAudio.play().catch(error => {
         console.error('Error playing audio:', error);
