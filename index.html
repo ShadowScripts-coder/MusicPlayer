@@ -1,6 +1,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="ui.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
 </head>
 
 <body>
@@ -9,9 +10,10 @@
     </div>
     <img id="song-cover">
     <div class="ui-bottom-bar">
-        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
-        <button id="pickMp3Button"></button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.25">
+        <input type="range" id="progress-bar" value="0" min="0" max="100" step="0.01">
+        <button id="pickMp3Button" class="play-button play"></button>
+        <button id="pauseButton"></button>
     </div>
+    <script src="player.js" defer></script>
 </body>
-
-<script src="player.js"></script>

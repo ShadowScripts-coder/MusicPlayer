@@ -1,3 +1,7 @@
+:root {
+    --pause-z-index: 0;
+}
+
 body {
     font-family: "Raleway", sans-serif;
     background-color: #000;
@@ -35,6 +39,7 @@ div.ui-top-bar {
 }
 
 #pickMp3Button {
+    z-index: 10;
     border-style: none;
     position: absolute;
     left: 50px;
@@ -52,7 +57,20 @@ div.ui-top-bar {
       radial-gradient(var(--r) at bottom var(--_g));
     clip-path: polygon(100% 50%,0 100%,0 0);
     background: #fff;
-  }
+}
+
+#pauseButton {
+    display: none;
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+    width: 46px;
+    height: 46px;
+    background-color: #000000;
+    border-style: double;
+    border-width: 0px 0px 0px 37px;
+    border-color: #ffffff;
+}
 
 #volume-slider {
     position: absolute;
@@ -60,6 +78,16 @@ div.ui-top-bar {
     bottom: 32.5px;
     accent-color: #fff;
     border-color: #000;
+    height: 5px;
+}
+
+#progress-bar {
+    position: absolute;
+    right: calc(50% - 500px);
+    width: 1000px;
+    bottom: 20px;
+    accent-color: #ff0000;
+    background-color: #000000;
     height: 5px;
 }
 
