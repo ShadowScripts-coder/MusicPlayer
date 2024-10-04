@@ -42,9 +42,6 @@ const audioFiles = [
 
 let currentAudio = null; // To store the current audio object
 
-
-
-
 // Array to keep track of the last 5 audio files played
 let previousFiles = [];
 
@@ -124,5 +121,19 @@ document.getElementById('pickMp3Button').addEventListener('click', () => {
         currentAudio.play();
         document.getElementById('pickMp3Button').style.display = "none";
         document.getElementById('pauseButton').style.display = "inline";
+    }
+});
+
+document.getElementById('song-cover').addEventListener('click', () => {
+    if (currentAudio != null) {
+        if (isPlaying(currentAudio) != true) {
+            currentAudio.play();
+            document.getElementById('pickMp3Button').style.display = "none";
+            document.getElementById('pauseButton').style.display = "inline";
+        } else {
+            currentAudio.pause();
+            document.getElementById('pauseButton').style.display = "none";
+            document.getElementById('pickMp3Button').style.display = "inline";
+        }
     }
 });
